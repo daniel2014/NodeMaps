@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574b</color>
     <color name="colorAccent">#8b8b8b</color>
     <color name="color_Branco">#ffffff</color>
+    <color name="material_Grey_700">#616161</color>
+    <color name="material_Grey_900">#212121</color>
+    <color name="material_Grey_800">#424242</color>
 </resources>
