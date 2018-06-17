@@ -88,7 +88,7 @@
                     android:id="@+id/button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="8dp"
                     android:background="@color/colorPrimary"
                     android:text="Entrar"
                     android:textColor="@color/color_Branco" />
@@ -98,9 +98,10 @@
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="14dp"
+                    android:layout_marginBottom="8dp"
                     android:text="Não tem conta? Cadastre-se"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
