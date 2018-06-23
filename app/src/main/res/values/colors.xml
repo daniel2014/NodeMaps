@@ -7,4 +7,26 @@
     <color name="material_Grey_700">#616161</color>
     <color name="material_Grey_900">#212121</color>
     <color name="material_Grey_800">#424242</color>
+
+    //Cor Cadastro Node
+    <color name="colorPrimaryNode">#3f51b5</color>
+    <color name="colorPrimaryDarkNode">#323b6d</color>
+    <color name="colorAccentNode">#FF4081</color>
+
+    //Cor Cadastro Ativo
+    <color name="colorPrimaryAtivo">#3f51b5</color>
+    <color name="colorPrimaryDarkAtivo">#323b6d</color>
+    <color name="colorAccentAtivo">#FF4081</color>
+
+    //Cores Personalizadas_1
+    <color name="colorBranco_1">#ffffff</color>
+    <color name="colorAzulFloatingButton">#353f7a</color>
+    <color name="colorCinzaNode">#646464</color>
+    <color name="colorTranparente">#00ffffff</color>
+    <color name="colorCinzaAzul_1">#878995</color>
+    <color name="colorAzul_5">#222748</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorCinza_1">#f0f0f0</color>
+    <color name="colorBlack_Tranparente1">#20000000</color>
+    <color name="colorVermelho1">#b71c1c</color>
 </resources>
