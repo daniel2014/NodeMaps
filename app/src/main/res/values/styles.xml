@@ -6,6 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <!-- Estilizando Menu direito da MenuToolBar| Cor de Fundo Branca, Adicionado este estylo no xml em ToolBar-->
+    <style name="PopupMenuToolBar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@android:color/white</item>
     </style>
 
 </resources>

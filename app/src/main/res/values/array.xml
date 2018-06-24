@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cidades">
+        <item>Selecione a Cidade</item>
+        <item>Mauá</item>
+        <item>Diadema</item>
+        <item>São Paulo</item>
+        <item>Santo André</item>
+        <item>São Caetano do Sul</item>
+        <item>São Bernardo do Campo</item>
+    </string-array>
+</resources>

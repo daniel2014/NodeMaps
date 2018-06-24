@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_inventario_filtrarCidade"
+        android:icon="@drawable/ic_menutoolbar_inventario_cidade_48dp"
+        android:title="Selecionar Cidade"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_inventario_criarNode"
+        android:title="+ Criar Node" />
+    <item
+        android:id="@+id/menu_inventario_criarCidade"
+        android:title="+ Criar Nova Cidade" />
+</menu>
