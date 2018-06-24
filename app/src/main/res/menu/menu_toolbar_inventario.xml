@@ -5,12 +5,12 @@
     <item
         android:id="@+id/menu_inventario_filtrarCidade"
         android:icon="@drawable/ic_menutoolbar_inventario_cidade_48dp"
-        android:title="Selecionar Cidade"
+        android:title="@string/selecionar_cidade"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_inventario_criarNode"
-        android:title="+ Criar Node" />
+        android:title="@string/criar_node" />
     <item
         android:id="@+id/menu_inventario_criarCidade"
-        android:title="+ Criar Nova Cidade" />
+        android:title="@string/criar_nova_cidade" />
 </menu>

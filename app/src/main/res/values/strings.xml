@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selecionar_cidade">Selecionar Cidade</string>
+    <string name="criar_node">+ Criar Node</string>
+    <string name="criar_nova_cidade">+ Criar Nova Cidade</string>
 </resources>

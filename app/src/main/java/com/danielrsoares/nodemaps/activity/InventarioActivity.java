@@ -41,15 +41,15 @@ public class InventarioActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.menu_inventario_filtrarCidade:
+            case R.id.menu_inventario_filtrarCidade: //Filtrar Cidades
                 Toast.makeText( this, "Filtrar Cidades", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.menu_inventario_criarNode:
+            case R.id.menu_inventario_criarNode: //Criar Novo Node
                 startActivity(new Intent(InventarioActivity.this, InventarioCadastroActivity.class));
                 //Toast.makeText(this, "Criar Node", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.menu_inventario_criarCidade:
-                Toast.makeText(this, "Criar Cidade", Toast.LENGTH_SHORT).show();
+            case R.id.menu_inventario_criarCidade: //Criar Nova Cidade
+                Toast.makeText(this, "Criar Nova Cidade", Toast.LENGTH_SHORT).show();
                 break;
             case android.R.id.home:
                 finish(); //Fecha a Tela
