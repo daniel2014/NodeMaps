@@ -40,8 +40,12 @@ public class AdapterInventario extends RecyclerView.Adapter<AdapterInventario.My
     public void onBindViewHolder(MyViewHolder holder, int position) {
         MovInventario movInventario = movInventarios.get(position);
 
-        holder.titulo.setText(movInventario.getNode());
-        holder.total.setText(movInventario.getTotalAtivos());
+        holder.node.setText(movInventario.getNode());
+        holder.bairro.setText(movInventario.getBairro());
+        holder.endereco.setText(movInventario.getEndereco());
+        holder.numero.setText(movInventario.getNumero());
+
+        //holder.total.setText(movInventario.getTotalAtivos());
         //holder.valor.setText(String.valueOf(movimentacao.getValor()));
         //holder.categoria.setText(movimentacao.getCategoria());
         //holder.valor.setTextColor(context.getResources().getColor(R.color.colorAccentReceita));
@@ -62,12 +66,15 @@ public class AdapterInventario extends RecyclerView.Adapter<AdapterInventario.My
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView titulo, total; //valor, categoria;
+        TextView node, bairro, endereco, numero, total; //valor, categoria;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            //titulo = itemView.findViewById(R.id.textAdapter_Node);
+            node = itemView.findViewById(R.id.txtAdapter_Node);
+            bairro = itemView.findViewById(R.id.txtAdapter_Bairro);
+            endereco = itemView.findViewById(R.id.txtAdapter_Endereco);
+            numero = itemView.findViewById(R.id.txtAdapter_Numero);
             //total = itemView.findViewById(R.id.textAdapter_TotalAtivos);
             //valor = itemView.findViewById(R.id.textAdapterValor);
             //categoria = itemView.findViewById(R.id.textAdapterCategoria);

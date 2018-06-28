@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_inventario_filtrarCidade"
+        android:id="@+id/m_inventario_filtrarCidade"
         android:icon="@drawable/ic_menutoolbar_inventario_cidade_48dp"
         android:title="@string/selecionar_cidade"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/menu_inventario_criarNode"
+        android:id="@+id/m_inventario_criarNode"
         android:title="@string/criar_node" />
     <item
-        android:id="@+id/menu_inventario_criarCidade"
+        android:id="@+id/m_inventario_criarCidade"
         android:title="@string/criar_nova_cidade" />
 </menu>

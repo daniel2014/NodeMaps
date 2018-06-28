@@ -6,4 +6,11 @@
     <string name="selecionar_cidade">Selecionar Cidade</string>
     <string name="criar_node">+ Criar Node</string>
     <string name="criar_nova_cidade">+ Criar Nova Cidade</string>
+    <string name="node">Node</string>
+    <string name="cidade">Cidade</string>
+    <string name="bairro">Bairro</string>
+    <string name="endereco">Endereço</string>
+    <string name="numero">Número</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="salvar">Salvar</string>
 </resources>

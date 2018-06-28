@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#00695c</color>
     <color name="colorPrimaryDark">#004d40</color>
-    <color name="colorAccent">#8b8b8b</color>
+    <color name="colorAccent">#388e3c</color>
+    <color name="colorAccent1">#8b8b8b</color>
     <color name="color_Branco">#ffffff</color>
     <color name="material_Grey_700">#616161</color>
     <color name="material_Grey_900">#212121</color>
@@ -16,7 +17,7 @@
     //Cor Cadastro Ativo
     <color name="colorPrimaryAtivo">#3f51b5</color>
     <color name="colorPrimaryDarkAtivo">#323b6d</color>
-    <color name="colorAccentAtivo">#FF4081</color>
+    <color name="colorAccentAtivo">#ff4081</color>
 
     //Cores Personalizadas_1
     <color name="colorBranco_1">#ffffff</color>

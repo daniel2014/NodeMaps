@@ -4,7 +4,9 @@ import com.danielrsoares.nodemaps.config.ConfiguracaoFirebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
-public class MovInventario {
+import java.io.Serializable;
+
+public class MovInventario implements Serializable {
 
     private String key;
     private String node;
@@ -42,14 +44,6 @@ public class MovInventario {
         this.key = key;
     }
 
-    public String getNode() {
-        return node;
-    }
-
-    public void setNode(String node) {
-        this.node = node;
-    }
-
     public String getModelo() {
         return modelo;
     }
@@ -72,6 +66,14 @@ public class MovInventario {
 
     public void setTotalAtivos(String totalAtivos) {
         this.totalAtivos = totalAtivos;
+    }
+
+    public String getNode() {
+        return node;
+    }
+
+    public void setNode(String node) {
+        this.node = node;
     }
 
     public String getCidade() {
