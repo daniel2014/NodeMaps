@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:alwaysDrawnWithCache="false"
+    android:animationCache="false"
+    android:scrollbarAlwaysDrawVerticalTrack="false">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -31,32 +34,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="NODE:" />
+                    android:text="NODE:"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/txtAdapter_Status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Status:" />
+                    android:text="Status:"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="49dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout4"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/textView30"
+                <ImageButton
+                    android:id="@+id/imageButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="X" />
+                    app:srcCompat="@drawable/ic_expandir_cinza_24dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,7 +79,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Bairro:" />
+                    android:text="Bairro:"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -89,14 +96,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Endereço:" />
+                    android:text="Endereço:"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/txtAdapter_Numero"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="N:" />
+                    android:text="N:"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

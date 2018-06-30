@@ -40,10 +40,10 @@ public class AdapterInventario extends RecyclerView.Adapter<AdapterInventario.My
     public void onBindViewHolder(MyViewHolder holder, int position) {
         MovInventario movInventario = movInventarios.get(position);
 
-        holder.node.setText(movInventario.getNode());
-        holder.bairro.setText(movInventario.getBairro());
-        holder.endereco.setText(movInventario.getEndereco());
-        holder.numero.setText(movInventario.getNumero());
+        holder.node.setText("NODE: " + movInventario.getNode());
+        holder.bairro.setText("Bairro: " + movInventario.getBairro());
+        holder.endereco.setText("End: " + movInventario.getEndereco());
+        holder.numero.setText("N." + movInventario.getNumero());
 
         //holder.total.setText(movInventario.getTotalAtivos());
         //holder.valor.setText(String.valueOf(movimentacao.getValor()));

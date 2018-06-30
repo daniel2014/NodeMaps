@@ -149,7 +149,6 @@ public class InventarioActivity extends AppCompatActivity {
 
             }
         });
-
         Log.i("CIDADE", "cidade:");
 
     }
@@ -170,6 +169,7 @@ public class InventarioActivity extends AppCompatActivity {
         //Toast.makeText(InventarioActivity.this, "onStart", Toast.LENGTH_LONG).show();
         //recuperarResumo();
 
+
     }
 
     @Override
@@ -180,19 +180,13 @@ public class InventarioActivity extends AppCompatActivity {
     }
 
     //Sobreescrever a Classe onStop / ele é chamado sempre que o app não estiver mais sendo utilizado.
-    //ou seja desanexando o Resumo do Listener no estado onStop ou seja desanexa o Evento do Listener do método recuperarResumo bem acima
     //Removendo Evento do Listener
     @Override
     protected void onStop() {
         super.onStop();
-
-        //usuarioRef.removeEventListener(valueEventListenerUsuario); // Remove EventListener de Referência de Usuário
-        //movimentacaoRef.removeEventListener(valueEventListenerMovimentacoes); //Remove EventListener de Movimentação de Usuário
         recuperarMovInventario(); //Atualizar dados
         movInventarioRef.removeEventListener(valueEventListenerMovInventario); //Remove EventListener de Inventario
-
        // Log.i("Evento", "Evento foi removido!");
-
     }
 
     //======== Menu ToolBar ========================

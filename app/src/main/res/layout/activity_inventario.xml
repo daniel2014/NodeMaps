@@ -22,6 +22,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyrcler_Inventario"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime" />
     </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
