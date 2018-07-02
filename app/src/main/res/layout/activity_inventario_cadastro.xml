@@ -35,16 +35,19 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxBackgroundMode="outline">
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                app:boxBackgroundMode="outline"
+                app:counterEnabled="true"
+                app:counterMaxLength="5">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtxt_CadastroNode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:cursorVisible="false"
                     android:hint="@string/node"
                     android:inputType="textPersonName"
+                    android:maxLength="5"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -52,6 +55,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
                 app:boxBackgroundMode="outline">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -66,7 +70,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
                 app:boxBackgroundMode="outline">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -83,6 +88,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
                 app:boxBackgroundMode="outline">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -98,7 +104,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 app:boxBackgroundMode="outline"
                 app:passwordToggleEnabled="false">
 
@@ -108,6 +114,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/numero"
                     android:inputType="number"
+                    android:maxLength="5"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp" />
 
@@ -133,7 +140,7 @@
                     android:id="@+id/bt_Salvar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="10"
                     android:backgroundTint="@color/colorPrimary"
                     android:onClick="salvarNode"
                     android:text="@string/salvar"

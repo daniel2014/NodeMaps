@@ -41,7 +41,7 @@ public class InventarioCadastroActivity extends AppCompatActivity{
         cidade = (MovInventario) dados.getSerializable("cidade");
         campoCidade.setText(cidade.getCidade());
 
-        Toast.makeText(InventarioCadastroActivity.this, "Cadastro para: " + cidade.getCidade(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(InventarioCadastroActivity.this, "Cadastro para: " + cidade.getCidade(), Toast.LENGTH_SHORT).show();
 
 
     }

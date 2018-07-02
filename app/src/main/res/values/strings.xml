@@ -13,4 +13,8 @@
     <string name="numero">Número</string>
     <string name="cancelar">Cancelar</string>
     <string name="salvar">Salvar</string>
+    <string name="status">Status:</string>
+    <string name="endere_o">Endereço:</string>
+    <string name="n">N:</string>
+    <string name="bairro_">Bairro:</string>
 </resources>
