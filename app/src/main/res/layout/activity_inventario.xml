@@ -17,12 +17,16 @@
         android:id="@+id/LinearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorAzul_5"
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyrcler_Inventario"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime" />
+            android:layout_marginBottom="4dp"
+            android:baselineAligned="false"
+            android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime"
+            tools:listitem="@layout/adapter_inventario" />
     </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

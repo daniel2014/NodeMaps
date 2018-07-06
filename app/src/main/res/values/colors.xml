@@ -20,7 +20,7 @@
     <color name="colorAccentAtivo">#ff4081</color>
 
     //Cores Personalizadas_1
-    <color name="colorBranco_1">#ffffff</color>
+    <color name="colorBranco_1">#f2f2f2</color>
     <color name="colorAzulFloatingButton">#353f7a</color>
     <color name="colorCinzaNode">#646464</color>
     <color name="colorTranparente">#00ffffff</color>

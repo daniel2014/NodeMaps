@@ -1,0 +1,39 @@
+{
+ "pacoteInventario":[
+  {
+    "node": "DI300",
+    "cidade": "Diadema",
+    "bairro": "Campanario",
+    "endereco": "Av Brasil",
+    "numero": "25"
+  },
+   {
+     "node": "MU100",
+     "cidade": "Mauá",
+     "bairro": "Jd Zaira",
+     "endereco": "Av Capitao Casa",
+     "numero": "25"
+   },
+   {
+     "node": "SPBB",
+     "cidade": "Sao Paulo",
+     "bairro": "Jd Palermo",
+     "endereco": "Rua Maria Helena Aparecida Secol",
+     "numero": "25"
+   },
+   {
+     "node": "SCNJ",
+     "cidade": "Sao Caetano do Sul",
+     "bairro": "Ceramica",
+     "endereco": "Rua da Cerejeira",
+     "numero": "758"
+   },
+   {
+     "node": "SBHH",
+     "cidade": "Sao Bernardo do Campo",
+     "bairro": "Baeta Neves",
+     "endereco": "Rua Jacinto Tognato",
+     "numero": "944"
+   }
+  ]
+}

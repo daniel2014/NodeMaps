@@ -6,12 +6,12 @@
     android:layout_height="wrap_content"
     android:alwaysDrawnWithCache="false"
     android:animationCache="false"
+    android:background="@color/colorBranco_1"
     android:scrollbarAlwaysDrawVerticalTrack="false">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         app:cardElevation="1dp"
         app:contentPadding="12dp">
@@ -36,7 +36,8 @@
                     android:layout_weight="1"
                     android:text="@string/node"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:text="@sample/inventarios.json/pacoteInventario/node" />
 
                 <TextView
                     android:id="@+id/txtAdapter_Status"
@@ -79,7 +80,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/bairro_"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="@sample/inventarios.json/pacoteInventario/bairro" />
             </LinearLayout>
 
             <LinearLayout
@@ -96,7 +98,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/endereco"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="@sample/inventarios.json/pacoteInventario/endereco" />
 
                 <TextView
                     android:id="@+id/txtAdapter_Numero"
@@ -105,7 +108,8 @@
                     android:layout_weight="1"
                     android:text="@string/n"
                     android:textAlignment="viewEnd"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="@sample/inventarios.json/pacoteInventario/numero" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
