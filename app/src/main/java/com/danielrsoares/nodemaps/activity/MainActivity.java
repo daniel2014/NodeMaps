@@ -8,6 +8,7 @@ import com.danielrsoares.nodemaps.config.ConfiguracaoFirebase;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.os.Handler;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
@@ -95,11 +96,24 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_principal) {
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
-            finish();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(MainActivity.this, MainActivity.class));
+                    finish();
+                }
+            }, 220);
 
         } else if (id == R.id.nav_inventario) {
-            startActivity(new Intent(MainActivity.this, InventarioActivity.class));
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(MainActivity.this, InventarioActivity.class));
+                }
+            }, 220);
+
 
         } else if (id == R.id.nav_slideshow) {
 
