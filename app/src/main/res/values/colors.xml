@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#00695c</color>
     <color name="colorPrimaryDark">#004d40</color>
-    <color name="colorAccent">#388e3c</color>
+    <color name="colorAccent">#00695c</color>
     <color name="colorAccent1">#8b8b8b</color>
     <color name="color_Branco">#ffffff</color>
     <color name="material_Grey_700">#616161</color>
@@ -12,7 +12,7 @@
     //Cor Cadastro Node
     <color name="colorPrimaryNode">#3f51b5</color>
     <color name="colorPrimaryDarkNode">#323b6d</color>
-    <color name="colorAccentNode">#FF4081</color>
+    <color name="colorAccentNode">#ff4081</color>
 
     //Cor Cadastro Ativo
     <color name="colorPrimaryAtivo">#3f51b5</color>
@@ -24,7 +24,7 @@
     <color name="colorAzulFloatingButton">#353f7a</color>
     <color name="colorCinzaNode">#646464</color>
     <color name="colorTranparente">#00ffffff</color>
-    <color name="colorCinzaAzul_1">#878995</color>
+    <color name="colorCinzaAzul_1">#c8c8c8</color>
     <color name="colorAzul_5">#222748</color>
     <color name="colorBlack">#000000</color>
     <color name="colorCinza_1">#f0f0f0</color>

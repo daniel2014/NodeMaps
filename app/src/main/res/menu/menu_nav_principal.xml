@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/m_navegacao_principal"
+        android:icon="@drawable/ic_principal_black_24dp"
+        android:title="Principal" />
+    <item
+        android:id="@+id/m_navegacao_atividades"
+        android:icon="@drawable/ic_atividades_black_24dp"
+        android:title="Atividades" />
+    <item
+        android:id="@+id/m_navegacao_historico"
+        android:icon="@drawable/ic_historico_black_24dp"
+        android:title="Histórico" />
+</menu>

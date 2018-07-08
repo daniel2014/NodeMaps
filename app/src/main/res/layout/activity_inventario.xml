@@ -23,8 +23,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyrcler_Inventario"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
+            android:background="@color/colorVermelho1"
             android:baselineAligned="false"
             android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime"
             tools:listitem="@layout/adapter_inventario" />
