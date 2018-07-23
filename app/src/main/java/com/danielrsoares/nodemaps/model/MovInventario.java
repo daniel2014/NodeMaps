@@ -22,15 +22,9 @@ public class MovInventario implements Serializable {
     }
 
     // Método => Para salvar no Firebase
-    public void salvar(){ // dataEscolhida recebe do parâmetro data
-        //Utilizando a Base64 para usar como um identificador
-        FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();//Recupeando email do usuário
-        //String idUsuario = Base64Custom.codificarBase64(autenticacao.getCurrentUser().getEmail()); //Codificando E-mail para Base64
-        //String mesAno = DateCustom.mesAnoDataEscolhida(dataEscolhida);
-
+    public void salvarFireBase(){ // dataEscolhida recebe do parâmetro data
         DatabaseReference firebase = ConfiguracaoFirebase.getFirebaseDatabase();
         firebase.child("mov_inventarioNode") //Entra em Nó inventario
-                //.child(idUsuario) //Entra em Nó identificador de Usuário usando E-mail em Base64
                 .child(cidade) //Entra em Nó Mês da movimentação
                 .push() // Cria o ID único do FireBase para cada incrementação ou seja cada vez que for salvo as informações ele gere um ID para aquele salvamento
                 .setValue(this); // Pega os valor dos Atributos

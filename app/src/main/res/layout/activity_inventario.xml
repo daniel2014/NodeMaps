@@ -28,6 +28,9 @@
             android:background="@color/colorVermelho1"
             android:baselineAligned="false"
             android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime"
+            app:layoutManager="LinearLayoutManager"
+            app:reverseLayout="true"
+            app:stackFromEnd="true"
             tools:listitem="@layout/adapter_inventario" />
     </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

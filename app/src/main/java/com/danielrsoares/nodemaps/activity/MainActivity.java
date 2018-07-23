@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity
                         mTextMessage.setText("Principal");
                         return true;
                     case R.id.m_navegacao_atividades:
-                        mTextMessage.setText("Atividades");
+                        startActivity(new Intent(MainActivity.this, AtividadeActivity.class));
+                       // mTextMessage.setText("Atividades");
                         return true;
                     case R.id.m_navegacao_historico:
                         mTextMessage.setText("Histórico");

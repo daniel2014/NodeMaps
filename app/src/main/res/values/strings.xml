@@ -14,9 +14,9 @@
     <string name="cancelar">Cancelar</string>
     <string name="salvar">Salvar</string>
     <string name="status">Status:</string>
-    <string name="endere_o">Endereço:</string>
+    <string name="endereco_">Endereço:</string>
     <string name="n">N:</string>
-    <string name="bairro_">Bairro:</string>
+    <string name="bairro__">Bairro:</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -24,5 +24,26 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="menu_main_deslogar">Deslogar</string>
+    <string name="title_activity_check_list_node">CheckListNodeActivity</string>
+    <string name="large_text"></string>
+
+    <string name="title_activity_atividade">AtividadeActivity</string>
+    <string name="node_">NODE:</string>
+    <string name="meu_Node">DIAB</string>
+    <string name="oc">OC:</string>
+    <string name="meu_OC">10560</string>
+    <string name="cidade_">Cidade:</string>
+    <string name="meu_Cidade">Diadema</string>
+    <string name="bairro_">Bairro:</string>
+    <string name="meu_Bairro">Campanário</string>
+    <string name="end">End:</string>
+    <string name="meu_Endereco">Av Brasil</string>
+    <string name="n_">N.</string>
+    <string name="meu_Numero">589</string>
+    <string name="todo">TODO</string>
+    <string name="data_inicio">Data Início</string>
+    <string name="hora_inicio">Hora Início</string>
+
+
 
 </resources>

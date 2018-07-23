@@ -9,9 +9,6 @@ import com.danielrsoares.nodemaps.R;
 import com.danielrsoares.nodemaps.model.MovInventario;
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class InventarioCadastroActivity extends AppCompatActivity{
@@ -56,7 +53,7 @@ public class InventarioCadastroActivity extends AppCompatActivity{
             movInventario.setBairro(campoBairro.getText().toString());
             movInventario.setEndereco(campoEndereco.getText().toString());
             movInventario.setNumero(campoNumero.getText().toString());
-            movInventario.salvar();
+            movInventario.salvarFireBase();
 
         }
 

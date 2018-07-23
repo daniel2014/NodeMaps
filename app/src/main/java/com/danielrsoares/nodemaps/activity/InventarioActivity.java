@@ -25,14 +25,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class InventarioActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private AlertDialog dialog_campoCidades;
-    private int int_posicaoArmazenada;
     private int int_posicao_Nova;
 
     private RecyclerView recyclerView;
@@ -46,13 +44,11 @@ public class InventarioActivity extends AppCompatActivity {
     private ValueEventListener valueEventListenerMovInventario;
 
     private MovInventario movInventarioCidade = new MovInventario(); //Criando Novo Objeto
-    String[] cidadesBrasil = {"Mauá", "Diadema", "São Paulo", "Santo André", "São Caetano do Sul", "São Bernardo do Campo"};
-    int posicaoNegativa = -1; // Posição é inicializada '-1' pois o array sempre inicializa com '0'
+    private String[] cidadesBrasil = {"Mauá", "Diadema", "São Paulo", "Santo André", "São Caetano do Sul", "São Bernardo do Campo"};
+    private int posicaoNegativa = -1; // Posição é inicializada '-1' pois o array sempre inicializa com '0'
 
-    //private AlertDialog.Builder builderDialog_Cidades;
 
     @Override
-    //Método => onCreate ============================================================================================= Método => onCreate//
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventario);
@@ -62,20 +58,40 @@ public class InventarioActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Sem Filtro"); // Outro modificador de título dinâmico se encontra no bloco FILTRO de CIDADES = Com Dialog
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        filtroCidadesDialog();
+        configuraAdapter();
+        configuraRecyclerView();
+        swipe();
 
-        //============== FILTRO de CIDADES = Com Dialog ======================================================================== FILTRO de CIDADES = Com Dialog//
-        AlertDialog.Builder builderDialog_Cidades = new AlertDialog.Builder(this);
+    } //Método => onCreate ---------------------------------------- Método => onCreate//
+
+    private void configuraRecyclerView() {
+        //Configurar RecyclerView
+        recyclerView = findViewById(R.id.recyrcler_Inventario);
+        // RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        //((LinearLayoutManager) layoutManager).setReverseLayout(true);
+        //((LinearLayoutManager) layoutManager).setStackFromEnd(true);
+        //recyclerView.setLayoutManager(layoutManager);
+        //recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(adapterInventario);
+    }
+
+    private void configuraAdapter() {
+        adapterInventario = new AdapterInventario(movInventarios, this);
+    }
+
+    private void filtroCidadesDialog() {
+
+        final AlertDialog.Builder builderDialog_Cidades = new AlertDialog.Builder(this);
         builderDialog_Cidades.setTitle("Selecione a Cidade:");
         builderDialog_Cidades.setCancelable(false);
 
-        int posicaoSetado = -1; //Dialog é iniciado sem nenhuma seleção inicial
-        builderDialog_Cidades.setSingleChoiceItems(cidadesBrasil, posicaoSetado, new DialogInterface.OnClickListener() {
+        builderDialog_Cidades.setSingleChoiceItems(cidadesBrasil, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
                 int_posicao_Nova = i;
-                int_posicaoArmazenada = int_posicao_Nova; // Serve para Comparar com a posição Armazenada com a posição atual alterada da cidade
-                posicaoNegativa = int_posicaoArmazenada; // com para com a posição posicaoNegativa que é inicializada com (-1) com a int_posicaoArmazenada
+                posicaoNegativa = int_posicao_Nova; // Serve para Comparar com a posição Armazenada com a posição atual alterada da cidade
 
             }
         });
@@ -86,46 +102,28 @@ public class InventarioActivity extends AppCompatActivity {
 
                 // Atualiza os dados da pesquisa de cidades comparando com a posição armazenada(int_posicaoArmazenada)
                 // com a posição atual modificada pelo usuário(int_posicao_Nova)
-                if (int_posicaoArmazenada == int_posicao_Nova) {
-                    getSupportActionBar().setTitle(cidadesBrasil[int_posicao_Nova]); //Altera o Título da ToolBar
-                    recuperarMovInventario(); //Atualizar dados
-                }
+                getSupportActionBar().setTitle(cidadesBrasil[int_posicao_Nova]); //Altera o Título da ToolBar
+                recuperaListaInventario(); //Atualizar Cidade Escolhida
 
             }
         });
 
         builderDialog_Cidades.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+            public void onClick(DialogInterface dialogInterface, int intCancelado) {
+
 
                 Toast.makeText(InventarioActivity.this,
                         "Seleção Cancelada",
                         Toast.LENGTH_SHORT).show();
-                //vazio
+
             }
         });
         dialog_campoCidades = builderDialog_Cidades.create();
-        //---------------------------------------------------------------------------------------------------------------------- FILTRO de CIDADES = Com Dialog//
+    }
 
 
-        //Configurar Adapter
-        adapterInventario = new AdapterInventario(movInventarios, this);
-
-        //Configurar RecyclerView
-        recyclerView = findViewById(R.id.recyrcler_Inventario);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        ((LinearLayoutManager) layoutManager).setReverseLayout(true);
-        ((LinearLayoutManager) layoutManager).setStackFromEnd(true);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(adapterInventario);
-        swipe();
-
-    } //Método => onCreate ------------------------------------------------------------------------------------------------------ Método => onCreate//
-
-
-    // Método Recuperando Movimentações do FIREBASE
-    public void recuperarMovInventario() {
+    public void recuperaListaInventario() {// Método Recuperando Movimentações do FIREBASE
 
         movInventarioRef = firebaseRef.child("mov_inventarioNode")
                 .child(cidadesBrasil[int_posicao_Nova]); // Adicionado (int_posicao_Nova) para o filtro de Cidades selecionado pelo usuário
@@ -139,10 +137,28 @@ public class InventarioActivity extends AppCompatActivity {
                     MovInventario movInventario = dados.getValue(MovInventario.class);//Recupera os valores dos itens ex: nome, idade, preço, cidade etc...
                     movInventario.setKey(dados.getKey());//Recupera a chave ID do Item de cada movimentação lá no FireBase
                     movInventarios.add(movInventario); //Criando um Array de List
-                    Log.i("dadosRetorno", "dados: " + movInventario.getNode());
-
                 }
-                //Método => Notifica o adapterInventario que os dados foram atualizado
+                adapterInventario.notifyDataSetChanged();//Método => Notifica o adapterInventario que os dados foram atualizado
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void atualizaDadoMovInventario() {
+
+        movInventarioRef = firebaseRef.child("mov_inventarioNode")
+                .child(cidadesBrasil[int_posicao_Nova]); // Adicionado (int_posicao_Nova) para o filtro de Cidades selecionado pelo usuário
+        valueEventListenerMovInventario = movInventarioRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                MovInventario movInventario = dataSnapshot.getValue(MovInventario.class);//Recupera os valores dos itens ex: nome, idade, preço, cidade etc...
+                movInventario.setKey(dataSnapshot.getKey());//Recupera a chave ID do Item de cada movimentação lá no FireBase
+                movInventarios.add(movInventario); //Criando um Array de List
+                Log.i("dadosRetorno", "dataSnapshot: " + movInventario.getNode());
                 adapterInventario.notifyDataSetChanged();
 
             }
@@ -152,53 +168,13 @@ public class InventarioActivity extends AppCompatActivity {
 
             }
         });
-        Log.i("CIDADE", "cidade:");
 
     }
-
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        //recuperarMovInventario(); //recuperando movimentações
-        //Toast.makeText(InventarioActivity.this, "onResume", Toast.LENGTH_LONG).show();
-
-    }
-
-    // === Recuperando o Resumo no estado onStart ou seja recupera Evento do Listener do método recuperarResumo abaixo ====/
-    @Override
-    protected void onStart() {
-        super.onStart();
-        //Toast.makeText(InventarioActivity.this, "onStart", Toast.LENGTH_LONG).show();
-        //recuperarResumo();
-
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        //Toast.makeText(InventarioActivity.this, "onPause", Toast.LENGTH_LONG).show();
-
-    }
-
-    //Sobreescrever a Classe onStop / ele é chamado sempre que o app não estiver mais sendo utilizado.
-    //Removendo Evento do Listener
-    @Override
-    protected void onStop() {
-        super.onStop();
-        recuperarMovInventario(); //Atualizar dados
-        movInventarioRef.removeEventListener(valueEventListenerMovInventario); //Remove EventListener de Inventario
-        // Log.i("Evento", "Evento foi removido!");
-    }
-
-    //======== Menu ToolBar ========================
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar_inventario, menu);
         return true;
-
     }
 
     @Override
@@ -213,10 +189,10 @@ public class InventarioActivity extends AppCompatActivity {
 
                 if (posicaoNegativa >= 0) { // Posição inicializada com -1 e após o usuário seleionar ex: Cidade; Mauá (0) irá ser true
 
-                    Intent intent = new Intent(getApplicationContext(), InventarioCadastroActivity.class);
+                    Intent irFormularioCadastro = new Intent(getApplicationContext(), InventarioCadastroActivity.class);
                     movInventarioCidade.setCidade(cidadesBrasil[int_posicao_Nova]);
-                    intent.putExtra("cidade", movInventarioCidade); // Esse parâmetro "cidade" é um tipo de Array e movInventarioCidade recupera os dados do objeto movInventarioCidade
-                    startActivity(intent);
+                    irFormularioCadastro.putExtra("cidade", movInventarioCidade); // Esse parâmetro "cidade" é um tipo de Array e movInventarioCidade recupera os dados do objeto movInventarioCidade
+                    startActivity(irFormularioCadastro);
 
                 } else {
                     Toast.makeText(InventarioActivity.this, "Selecione um Filtro antes de Cadastrar", Toast.LENGTH_LONG).show();
@@ -235,7 +211,7 @@ public class InventarioActivity extends AppCompatActivity {
     }
     // -------- Menu ToolBar ---------------------------------------------------------------------------------------------------------------------------//
 
-    // ======== Evento do Swipe para deletar itens =====================================================================================================//
+
     public void swipe() {
         ItemTouchHelper.Callback itemTouch = new ItemTouchHelper.Callback() {
             @Override
@@ -264,7 +240,6 @@ public class InventarioActivity extends AppCompatActivity {
     }
     //---------- Evento do Swipe para deletar itens ------------------------------------------------------------------------------------------------------//
 
-    // ======== Método para excluir os Itens =====================================================================================================//
     public void excluirMovInventario(final RecyclerView.ViewHolder viewHolder) { // Copiado do método acima getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder)
 
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -306,5 +281,12 @@ public class InventarioActivity extends AppCompatActivity {
 
     }
     //-------- Método para excluir os Itens ------------------------------------------------------------------------------------------------------//
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        atualizaDadoMovInventario();
+        movInventarioRef.removeEventListener(valueEventListenerMovInventario); //Remove EventListener de Inventario
+    }
 
 }
