@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorBlack_Tranparente1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inspecao_optica_rf_entrada"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/divider8"
+        app:layout_constraintEnd_toEndOf="@+id/divider8"
+        app:layout_constraintStart_toStartOf="@+id/divider8"
+        app:layout_constraintTop_toTopOf="@+id/divider8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/_CONSTRAINT_LAYOUT_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/Material_Grey_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/color_Branco"
+            app:layout_constraintBottom_toBottomOf="@+id/_TABELA_GRUP_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/_TXT_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/pot_otica_vdc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/_TABELA_GRUP_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/_TABELA_GRUP_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/_TXT_1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx1"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/Potencia_Otica_Entrada_Node"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx2"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/Potencia_Otica_Entrada_Node"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx3"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/Potencia_Otica_Entrada_Node"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx4"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/Potencia_Otica_Entrada_Node"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/_TXT1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/pad_rx"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/_TABELA_GRUP_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/_TABELA_GRUP_1"
+            app:layout_constraintTop_toBottomOf="@+id/_TXT1_1"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pad"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/PAD"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pad"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/PAD"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pad"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/PAD"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pad"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/PAD"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/_CONSTRAINT_LAYOUT_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/Material_Grey_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_CONSTRAINT_LAYOUT_1">
+
+        <View
+            android:id="@+id/_DIVIDER_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/color_Branco"
+            app:layout_constraintBottom_toBottomOf="@+id/_TABELA_GRUP_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/_TXT_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="CH.PILOTO ALTO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/_TABELA_GRUP_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/_TABELA_GRUP_3_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/_TXT_2">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/_TXT_RX1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx1"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX1_CA_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_ALTO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/_TXT_RX2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx2"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX2_CA_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_ALTO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/_TXT_RX3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx3"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX3_CA_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_ALTO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/_TXT_RX4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx4"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX4_CA_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_ALTO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/_TXT_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="CH.PILOTO BAIXO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/_TABELA_GRUP_3_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/_TABELA_GRUP_2"
+            app:layout_constraintTop_toBottomOf="@+id/_TXT_2"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/_TXT1_RX1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx1"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX1_CB_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_BAIXO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/_TXT2_RX2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx2"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX2_CB_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_BAIXO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorBlack_Tranparente1">
+
+                <TextView
+                    android:id="@+id/_TXT3_RX3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx3"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX3_CB_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_BAIXO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="@color/Material_Grey_50">
+
+                <TextView
+                    android:id="@+id/_TXT4_TXT4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Rx4"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_RX4_CB_ENTRADA_NODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/CANAL_PILOTO_BAIXO"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </TableRow>
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

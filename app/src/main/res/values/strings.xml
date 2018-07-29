@@ -43,6 +43,30 @@
     <string name="todo">TODO</string>
     <string name="data_inicio">Data Início</string>
     <string name="hora_inicio">Hora Início</string>
+    <string name="data_hora_Cabecalho">DATA / HORA</string>
+    <string name="data_termino">Data Termino</string>
+    <string name="hora_termino">Hora Termino</string>
+    <string name="informaces_do_node">INFORMAÇÕES DO NODE</string>
+    <string name="fabricante">Fabricante</string>
+    <string name="segmentacao_node">SEGMENTAÇÃO NODE</string>
+    <string name="_1x1">1X1</string>
+    <string name="_1x2">1X2</string>
+    <string name="_2x2">2X2</string>
+    <string name="_2x4">2X4</string>
+    <string name="Rx2">RX2</string>
+    <string name="posicionamento_node">POSICIONAMENTO NODE</string>
+    <string name="ok">OK</string>
+    <string name="pendente">PENDENTE</string>
+    <string name="inspecao_optica_rf_entrada">INSPEÇÃO OPTICA / RF - ENTRADA</string>
+    <string name="pot_otica_vdc">Pot.Ótica (VDC)</string>
+    <string name="_1x4">1X4</string>
+    <string name="_4x4">4X4</string>
+    <string name="Rx1">RX1</string>
+    <string name="pad_rx">PAD RX</string>
+    <string name="Rx3">RX3</string>
+    <string name="Rx4">RX4</string>
+    <string name="pad">PAD</string>
+
 
 
 

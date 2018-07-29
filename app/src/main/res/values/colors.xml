@@ -30,4 +30,7 @@
     <color name="colorCinza_1">#f0f0f0</color>
     <color name="colorBlack_Tranparente1">#20000000</color>
     <color name="colorVermelho1">#b71c1c</color>
+    <color name="Material_Grey_600">#757575</color>
+    <color name="Material_Grey_500">#9e9e9e</color>
+    <color name="Material_Grey_50">#fafafa</color>
 </resources>
